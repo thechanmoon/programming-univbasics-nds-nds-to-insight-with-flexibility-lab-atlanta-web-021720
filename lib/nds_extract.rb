@@ -51,8 +51,8 @@ def movies_with_director_key(name, movies_collection)
     retVal = []
 
   movies_collection.length.times do |index|
-    movie_data = movies_collection[index]
-    retVal.push(movie_with_director_name(name, movie_data))
+    movie = movies_collection[index]
+    retVal.push(movie_with_director_name(name, movie))
   end
 
   return retVal
