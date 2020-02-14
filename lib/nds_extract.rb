@@ -81,9 +81,8 @@ def movies_with_directors_set(source)
   retArray = []
 
   while index < source.length do
-    dir_info_hash = source[index]
-    name = dir_info_hash[:name]
-    movies = dir_info_hash[:movies]
+    name = source[index][:name]
+    movies = source[index][:movies]
     retArray << movies_with_director_key(name, movies)
     index += 1
   end
