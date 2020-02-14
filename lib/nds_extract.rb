@@ -52,7 +52,7 @@ def movies_with_director_key(name, movies_collection)
 
   movies_collection.length.times do |index|
     movie_data = movies_collection[index]
-    retVal << movie_with_director_name(name, movie_data)
+    retVal.push(movie_with_director_name(name, movie_data))
   end
 
   return retVal
