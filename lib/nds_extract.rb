@@ -78,10 +78,10 @@ def gross_per_studio(collection)
   collection.length.times do |index|
     movies = collection[index]
 
-    if !retVal[movies[:studio]]
-      retVal[movies[:studio]] = movies[:worldwide_gross]
-    else
+    if retVal[movies[:studio]]
       retVal[movies[:studio]] += movies[:worldwide_gross]
+    else
+      retVal[movies[:studio]] = movies[:worldwide_gross]
     end
   
   end
